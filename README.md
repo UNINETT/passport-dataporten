@@ -61,4 +61,4 @@ application:
 
 [The ISC License](http://opensource.org/licenses/ISC)
 
-Copyright (c) 2015 [UNINETT AS](http://github.com/uninett)
+Copyright &copy; 2015-2016 [UNINETT AS](http://github.com/uninett)
