@@ -53,9 +53,9 @@ application:
 
 ## Thanks
 
-	- [Jørn Åne](http://github.com/jornane)
-	- [Jared Hanson](http://github.com/jaredhanson)
-	- [Andreas Åkre Solberg](http://github.com/andreassolberg)
+- [Jørn Åne](http://github.com/jornane)
+- [Jared Hanson](http://github.com/jaredhanson)
+- [Andreas Åkre Solberg](http://github.com/andreassolberg)
 
 ## License
 
