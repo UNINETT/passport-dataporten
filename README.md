@@ -1,9 +1,14 @@
-# passport-feideconnect-oauth2
+# Passport Strategy for Dataporten
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Feide Connect](http://feideconnect.no) using the OAuth 2.0 API.
+with [Dataporten](http://dataporten.no) using the OAuth 2.0 API.
+
+This is an updated version of the strategy for Feide Connect. Feide Connect was the pilot service for Dataporten. Dataporten went into production in March 2016.
+
 
 ## Install
+
+TODO FIX:
 
 	$ npm install passport-feideconnect-oauth2
 
@@ -50,6 +55,7 @@ application:
 
 	- [Jørn Åne](http://github.com/jornane)
 	- [Jared Hanson](http://github.com/jaredhanson)
+	- [Andreas Åkre Solberg](http://github.com/andreassolberg)
 
 ## License
 

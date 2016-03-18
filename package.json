@@ -1,7 +1,7 @@
 {
-	"name": "passport-feideconnect-oauth2",
+	"name": "passport-dataporten",
 	"version": "0.0.1",
-	"description": "Feide Connect OAuth2 strategy for Passport.",
+	"description": "Dataporten OAuth2 strategy for Passportjs.",
 	"keywords": [
 		"passport",
 		"feide connect",
@@ -14,13 +14,13 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/uninett/passport-feideconnect-oauth2.git"
+		"url": "git://github.com/uninett/passport-dataporten.git"
 	},
 	"bugs": {
-		"url": "http://github.com/uninett/passport-feideconnect-oauth2/issues"
+		"url": "http://github.com/uninett/passport-dataporten/issues"
 	},
 	"license": "ISC",
-	"main": "./lib/passport-feideconnect-oauth2",
+	"main": "./lib/passport-dataporten",
 	"dependencies": {
 		"pkginfo": "0.2.x",
 		"passport-oauth": "1.0.0"
@@ -28,5 +28,5 @@
 	"engines": {
 		"node": ">= 0.4.0"
 	},
-	"homepage": "https://feideconnect.no"
+	"homepage": "https://dataporten.no"
 }
