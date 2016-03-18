@@ -8,9 +8,9 @@ This is an updated version of the strategy for Feide Connect. Feide Connect was 
 
 ## Install
 
-TODO FIX:
+TODO: Not published to NPM yet. Will do when ready...
 
-	$ npm install passport-feideconnect-oauth2
+	$ npm install passport-dataporten
 
 ## Usage
 
@@ -21,7 +21,7 @@ account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a client ID, client secret, and callback URL.
 
-	passport.use(new FeideConnectStrategy({
+	passport.use(new DataportenStrategy({
 			clientID: CLIENT_ID,
 			clientSecret: CLIENT_SECRET,
 			callbackURL: 'https://www.example.net/auth/feideconnect/callback'
