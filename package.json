@@ -1,32 +1,34 @@
 {
-	"name": "passport-dataporten",
-	"version": "1.0.0",
-	"description": "Dataporten OAuth2 strategy for Passportjs.",
-	"keywords": [
-		"passport",
-		"feide connect",
-		"feide",
-		"uninett",
-		"oauth2",
-		"auth",
-		"authentication",
-		"identity"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/uninett/passport-dataporten.git"
-	},
-	"bugs": {
-		"url": "http://github.com/uninett/passport-dataporten/issues"
-	},
-	"license": "ISC",
-	"main": "./lib/passport-dataporten",
-	"dependencies": {
-		"pkginfo": "0.2.x",
-		"passport-oauth": "1.0.0"
-	},
-	"engines": {
-		"node": ">= 0.4.0"
-	},
-	"homepage": "https://dataporten.no"
+  "name": "passport-dataporten",
+  "version": "1.0.0",
+  "description": "Dataporten OAuth2 strategy for Passportjs.",
+  "keywords": [
+    "passport",
+    "feide connect",
+    "feide",
+    "uninett",
+    "oauth2",
+    "auth",
+    "authentication",
+    "identity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uninett/passport-dataporten.git"
+  },
+  "bugs": {
+    "url": "http://github.com/uninett/passport-dataporten/issues"
+  },
+  "license": "ISC",
+  "main": "./lib/passport-dataporten",
+  "dependencies": {
+    "passport": "^0.3.2",
+    "passport-oauth": "1.0.0",
+    "pkginfo": "0.2.x",
+    "request": "^2.69.0"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "homepage": "https://dataporten.no"
 }
