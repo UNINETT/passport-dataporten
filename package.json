@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/uninett/passport-dataporten.git"
+    "url": "git://github.com/UNINETT/passport-dataporten.git"
   },
   "bugs": {
-    "url": "http://github.com/uninett/passport-dataporten/issues"
+    "url": "https://github.com/UNINETT/passport-dataporten/issues"
   },
   "license": "ISC",
   "main": "./lib/passport-dataporten",
