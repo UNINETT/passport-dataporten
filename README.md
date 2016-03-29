@@ -8,9 +8,8 @@ This is an updated version of the strategy for Feide Connect. Feide Connect was 
 
 ## Install
 
-TODO: Not published to NPM yet. Will do when ready...
 
-	$ npm install passport-dataporten
+	$ npm install passport-dataporten --save
 
 ## Usage
 
