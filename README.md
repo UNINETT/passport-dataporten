@@ -24,7 +24,7 @@ accepts these credentials and calls `done` providing a user, as well as
 	passport.use(new DataportenStrategy({
 			clientID: CLIENT_ID,
 			clientSecret: CLIENT_SECRET,
-			callbackURL: 'https://www.example.net/auth/feideconnect/callback'
+			callbackURL: 'https://www.example.net/auth/dataporten/callback'
 		},
 		function(accessToken, refreshToken, profile, done) {
 			User.findOrCreate({ id: profile.id }, function (err, user) {
@@ -41,11 +41,11 @@ authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-	app.get('/auth/feideconnect',
-		passport.authorize('feideconnect'));
+	app.get('/auth/dataporten',
+		passport.authorize('dataporten'));
 
-	app.get('/auth/feideconnect/callback',
-		passport.authorize('feideconnect', { failureRedirect: '/login' }),
+	app.get('/auth/dataporten/callback',
+		passport.authorize('dataporten', { failureRedirect: '/login' }),
 		function(req, res) {
 			// Successful authentication, redirect home.
 			res.redirect('/');
