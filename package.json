@@ -4,11 +4,11 @@
   "description": "Dataporten OAuth2 strategy for Passportjs.",
   "keywords": [
     "passport",
-    "feide connect",
+    "dataporten",
     "feide",
     "uninett",
     "oauth2",
-    "auth",
+    "openid",
     "authentication",
     "identity"
   ],
