@@ -15,7 +15,7 @@ This is an updated version of the strategy for Feide Connect. Feide Connect was 
 
 #### Configure Strategy
 
-The Feide Connect authentication strategy authenticates users using a Feide Connect
+The Dataporten authentication strategy authenticates users using a Dataporten
 account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a client ID, client secret, and callback URL.
@@ -34,7 +34,7 @@ accepts these credentials and calls `done` providing a user, as well as
 
 #### Authenticate Requests
 
-Use `passport.authorize()`, specifying the `'feideconnect'` strategy, to
+Use `passport.authorize()`, specifying the `'dataporten'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
