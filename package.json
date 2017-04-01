@@ -1,6 +1,6 @@
 {
   "name": "passport-dataporten",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Dataporten OAuth2 strategy for Passportjs.",
   "keywords": [
     "passport",
@@ -22,13 +22,13 @@
   "license": "ISC",
   "main": "./lib/passport-dataporten",
   "dependencies": {
-    "passport": "^0.3.2",
-    "passport-oauth": "1.0.0",
-    "pkginfo": "0.2.x",
+    "passport": "~0.3.2",
+    "passport-oauth": "~1.0.0",
+    "pkginfo": "~0.2.x",
     "request": "^2.69.0"
   },
   "engines": {
     "node": ">= 0.4.0"
   },
-  "homepage": "https://dataporten.no"
+  "homepage": "https://docs.dataporten.no"
 }
