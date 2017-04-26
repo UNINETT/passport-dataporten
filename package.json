@@ -1,6 +1,6 @@
 {
   "name": "passport-dataporten",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Dataporten OAuth2 strategy for Passportjs.",
   "keywords": [
     "passport",
