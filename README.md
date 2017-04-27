@@ -1,54 +1,51 @@
 # Passport Strategy for Dataporten
 
-[Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Dataporten](http://dataporten.no) using the OAuth 2.0 API.
-
-This is an updated version of the strategy for Feide Connect. Feide Connect was the pilot service for Dataporten. Dataporten went into production in March 2016.
-
+[Passport](https://github.com/jaredhanson/passport) strategy for authenticating with [Dataporten](http://dataporten.no) using the OAuth 2.0 API.
 
 ## Install
 
+```
+npm install passport-dataporten --save
+```
 
-	$ npm install passport-dataporten --save
+
+
 
 ## Usage
 
-#### Configure Strategy
 
-The Dataporten authentication strategy authenticates users using a Dataporten
-account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
-accepts these credentials and calls `done` providing a user, as well as
-`options` specifying a client ID, client secret, and callback URL.
+Use the helper Setup class for simple and flexible passportjs setup:
 
-	passport.use(new DataportenStrategy({
-			clientID: CLIENT_ID,
-			clientSecret: CLIENT_SECRET,
-			callbackURL: 'https://www.example.net/auth/dataporten/callback'
-		},
-		function(accessToken, refreshToken, profile, done) {
-			User.findOrCreate({ id: profile.id }, function (err, user) {
-				return done(err, user);
-			});
-		}
-	));
+```
+var Dataporten = require('passport-dataporten');
+var app = express();
 
-#### Authenticate Requests
+var config = {
+	"clientID": "10ad9f43-1ba3-4cb2-a459-1f9b3af25ac1",
+	"clientSecret": "4175677a-06f8-4cc3-8224-2f858d18b610",
+  "sessionkey": "d6096809-4d65-4931-b7d3-97637fc70e88",
+	"callbackURL": "http://localhost:8080/auth/dataporten/callback",
+};
+var dataportenSetup = new Dataporten.Setup(config);
 
-Use `passport.authorize()`, specifying the `'dataporten'` strategy, to
-authenticate requests.
+app.use(dpsetup.passport.initialize());
+app.use(dpsetup.passport.session());
 
-For example, as route middleware in an [Express](http://expressjs.com/)
-application:
+dpsetup.setupAuthenticate(app, '/login');
+dpsetup.setupLogout(app, '/logout');
+dpsetup.setupCallback(app);
+```
 
-	app.get('/auth/dataporten',
-		passport.authorize('dataporten'));
+Use `Dataporten.Authz` for authorization:
 
-	app.get('/auth/dataporten/callback',
-		passport.authorize('dataporten', { failureRedirect: '/login' }),
-		function(req, res) {
-			// Successful authentication, redirect home.
-			res.redirect('/');
-		});
+```
+var authzConfig = {"redirectOnNoAccess": "/login"};
+var dataportenAuthorizationMiddleware = (new Dataporten.Authz(authzConfig))
+	.allowUsers(['eeb5bad8-c466-4393-91cc-6fb61807e4dd'])
+	.allowGroups(['fc:adhoc:892fe78e-14cd-43b1-abf8-b453a2c7758d'])
+	.middleware();
+app.use('/', dataportenAuthorizationMiddleware);
+```
 
 ## Thanks
 
@@ -60,4 +57,4 @@ application:
 
 [The ISC License](http://opensource.org/licenses/ISC)
 
-Copyright &copy; 2015-2016 [UNINETT AS](http://github.com/uninett)
+Copyright &copy; 2015-2017 [UNINETT AS](http://github.com/uninett)
